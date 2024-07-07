@@ -42,7 +42,7 @@ app.get("/clothes", (req, res) => {
       items: result,
       total: jsonData.items.length,
       page,
-      perPage,
+      perPage, 
       totalPages: Math.ceil(jsonData.items.length / perPage),
     });
   });
