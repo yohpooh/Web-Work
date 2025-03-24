@@ -487,15 +487,6 @@
     display: grid;
     gap: 1em;
 
-    @keyframes slide {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-100%);
-        }
-    }
-
     .header-container {
         background-color: #8A2BE2;
         border-top-right-radius: 10px;
@@ -509,7 +500,7 @@
              
                 text-align: center;
                 justify-content: center;
-            };
+            }
         }
         p {
             margin: 0 2% 1% 2%;
@@ -524,81 +515,118 @@
             filter: invert(88%) sepia(47%) saturate(0%) hue-rotate(100deg) brightness(108%) contrast(109%);
         }
     }
+}
 
-    .body-container {
-        background-color: #FBFBFB;
-        height: 150px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        overflow: hidden;
-        user-select: none;
-        animation: slide 5s;
+.body-container {
+    background-color: #FBFBFB;
+    height: 130px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+    user-select: none;
+    
+    margin: 0 20px;
+}
 
-        .scroller {
-            white-space: nowrap;
-            max-width: 610px;
-        }
-        
-        .scroller-slide {
-            display: flex;
-            gap: 1rem;
-        }
+.scroller-left {
+    white-space: nowrap;
+    max-width: 610px;
+    padding: 10px 0;
+    position: relative;
+}
 
-        .item {
-            height: 40px;
-            animation: slid 5s infinite linear;
-        }
-            
-        
-        /*
-        .scroll {
-            list-style: none;
-        }
-        .scroll li {
-            font-weight: bolder;
-            font-size: large;
-            color: #8A2BE2;
-        }
+.scroller-left::before, .scroller-left::after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
 
-        .scroller-one {
-            max-width: 600px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
+.scroller-left::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #FBFBFB);
+}
 
-        .scroller-inner-one {
-            display: flex;
-            justify-content: space-between;
-            padding-block: 10px;
-            margin-bottom: 0;
-            gap: 2rem;
-            flex-shrink: 0; 
-            min-width: 100%;
-            animation: 5s slide infinite linear;
-            -webkit-animation: 5s slide infinite linear;
-        }
-        
-        .scroller-two {
-            max-width: 600px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
+.scroller-left::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #FBFBFB);
+}
 
-        .scroller-inner-two {
-            display: flex;
-            justify-content: space-between;
-            padding-block: 10px;
-            margin-bottom: 0;
-            gap: 2rem;
-            flex-shrink: 0;
-            min-width: 100%;
-        }
-        */
-        
-        @keyframes slide {
-            left: -200px
-        }
+.scroller-left:hover .scroller-slide-left {
+    animation-play-state: paused;
+}
+
+.scroller-slide-left {
+    display: flex;
+    gap: 1rem;
+    animation: slide-to-left 20s linear infinite;
+}
+
+.item-left {
+    height: 40px;
+    font-weight: bold;
+    color: #8A2BE2;
+}
+
+.scroller-right {
+    white-space: nowrap;
+    max-width: 610px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.scroller-right::before, .scroller-right::after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.scroller-right::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #FBFBFB);
+}
+
+.scroller-right::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #FBFBFB);
+}
+
+.scroller-right:hover .scroller-slide-right {
+    animation-play-state: paused;
+}
+
+
+.scroller-slide-right {
+    display: flex;
+    gap: 1rem;
+    animation: slide-to-right 20s linear infinite;
+}
+
+.item-right {
+    height: 40px;
+    font-weight: bold;
+    color: #8A2BE2;
+}
+
+@keyframes slide-to-left {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-to-right {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
     }
 }
