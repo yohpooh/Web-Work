@@ -47,6 +47,9 @@
                                 <img src="assets/icons/download.png">
                             </a>
                         </span>
+                        <div class="resume-tooltip">
+                            <span>Download My Resume</span>
+                        </div>
                     </button>
                     <button class="email">
                         <span><img src="assets/icons/envelope.png"></span>
@@ -54,7 +57,7 @@
                     </button>
                     <button class="github">
                         <span><img src="assets/icons/github.png"></span>
-                        <span><a href="https://github.com/yohpooh">Github</a></span>
+                        <span><a href="https://github.com/yohpooh" target="_blank">Github</a></span>
                     </button>
                     
                     <!--
@@ -178,31 +181,194 @@
                     <p>The tech stack that I've experience in professional field.</p>
                 </div>
                 <div class="box-4-body-container">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam pariatur, impedit quidem eius eos dolor enim ipsam ad earum, dolores repellendus magnam aliquam in saepe sequi aperiam corporis consequuntur nisi?</p>
+                    <div class = "button-containers">
+                        <div class="tech-box cpp" style="grid-area: cpp-box">
+                            <div class="icon-container cpp-icon">
+                                <img src="assets/icons/cpp-white.png" alt="">
+                            </div>
+                            <div class="text">
+                                <div class="text-1">C++</div>
+                                <div class="text-2">Version 11+</div>
+                            </div>
+                            <div class="external-link">
+                                <a href="https://cplusplus.com" target="_blank">
+                                    <img src="assets/icons/external-link.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-box delphi" style="grid-area: delphi-box">
+                            <div class="icon-container delphi-icon">
+                                <img src="assets/icons/delphi-white.png" alt="">
+                            </div>
+                            <div class="text">
+                                <div class="text-1">Delphi</div>
+                                <div class="text-2">Version 10.2+</div>
+                            </div>
+                            <div class="external-link">
+                                <a href="https://www.embarcadero.com/products/delphi" target="_blank">
+                                    <img src="assets/icons/external-link.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-box csharp" style="grid-area: csharp-box">
+                            <div class="icon-container csharp-icon">
+                                <img src="assets/icons/csharp-white.png" alt="">
+                            </div>
+                            <div class="text">
+                                <div class="text-1">C#</div>
+                                <div class="text-2">Version 13+</div>
+                            </div>
+                            <div class="external-link">
+                                <a href="https://visualstudio.microsoft.com/#vs-section" target="_blank">
+                                    <img src="assets/icons/external-link.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="tech-box java" style="grid-area: java-box">
+                            <div class="icon-container java-icon">
+                                <img src="assets/icons/java-white.png" alt="">
+                            </div>
+                            <div class="text">
+                                <div class="text-1">Java</div>
+                                <div class="text-2">Version Java SE 11+</div>
+                            </div>
+                            <div class="external-link">
+                                <a href="https://www.java.com/en/" target="_blank">
+                                    <img src="assets/icons/external-link.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="box" style="grid-area: box-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <div class="projects-count">
+                <div class="text-1">
+                    <h1>6</h1>
+                    <img src="assets/icons/plus.png">
+                </div>
+                <div class="text-2">
+                    <img src="assets/icons/project.png">
+                    <h3>Projects</h3>
+                    
+                    <div class="projects-tooltip">
+                        <span>This Includes Private/Public/Proffesional Projects</span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="box" style="grid-area: box-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <div class="clients-count">
+                <div class="text-1">
+                    <h1>2</h1>
+                    <img src="assets/icons/plus.png">
+                </div>
+                <div class="text-2">
+                    <img src="assets/icons/customer.png">
+                    <h3>Clients/Company</h3>
+                </div>
+            </div>
         </div>
         <div class="box" style="grid-area: box-7">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            <div class="years-count">
+                <div class="text-1">
+                    <h1>2</h1>
+                    <img src="assets/icons/plus.png">
+                </div>
+                <div class="text-2">
+                    <img src="assets/icons/badge.png">
+                    <h3>Years of Experience</h3>
+                </div>
+            </div>
         </div>
         <div class="box" style="grid-area: box-8">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores totam, ut necessitatibus pariatur suscipit molestias illo natus hic nisi eveniet repudiandae quidem in tempora magni laborum et similique nobis quod.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi aliquid quo fuga debitis reiciendis veniam nisi! Debitis amet accusamus nulla eum molestias assumenda blanditiis quas vel quidem, tempora consequuntur temporibus.
+            <div class="box-8-container">
+                <div class="box-8-icon">
+                    <div class="box-8-icon-container">
+                        <img src="assets/icons/work-team.png">
+                    </div>
+                </div>
+                <div class="box-8-text-1">
+                    <h2>Let's Work Together</h2>
+                </div>
+                <div class="box-8-text-2">
+                        <ngx-typed-js [strings]="['reality.', 'existance.', 'life.', 'the internet!', 'infinity and beyond!', 'the pooh?']" [loop]="true" (completed)="doSmth()">
+                            <h2>and make your ideas come to <span class="typing"></span></h2>
+                        </ngx-typed-js>
+                </div>
+                <div class="box-8-buttons">
+                    <button class="box-8-email">
+                        <span>
+                            <a href="mailto:work.bramrainier@gmail.com">
+                                <img src="assets/icons/direct-mail.png">
+                            </a>
+                        </span>
+                        
+                        <div class="email-tooltip">
+                            <span>Contact me through Email</span>
+                        </div>
+                    </button>
+                    <button class="box-8-viber">
+                        <span>
+                            <a href="">
+                                <img src="assets/icons/viber.png">
+                            </a>
+                        </span>
+
+                        <div class="viber-tooltip">
+                            <span>Contact me through Viber</span>
+                        </div>
+                    </button>
+                    <button class="box-8-github">
+                        <span>
+                            <a href="https://github.com/yohpooh" target="_blank">
+                                <img src="assets/icons/github.png">
+                            </a>
+                        </span>
+                        
+                        <div class="github-tooltip">
+                            <span>Check my GitHub</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="box" style="grid-area: box-9">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit vero minima asperiores aut, laboriosam eos dignissimos qui hic consequatur perferendis ipsum, aperiam ea neque architecto deserunt tempora quam repudiandae ullam.
+        <div class="box box-9" style="grid-area: box-9">
+            <div class="box-9-container">
+                <div class="box-9-text-1">
+                    <div>Made with 💜 by </div>
+                    <div class="box-9-name">_yohpooh</div>
+                </div>
+                <div class="box-9-text-2">
+                    <p>© 2025 All rights reserved</p>
+                </div>
+            </div>
         </div>
         <div class="box" style="grid-area: box-10">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur amet error dolor sed voluptatum nulla provident, dicta earum cupiditate? Rerum, voluptas deleniti. Mollitia voluptas iste eaque vitae perspiciatis expedita nulla.
+            <div class="box-10-container">
+                <div class="header-container">
+                    <h4>
+                        <span class="s1"><img src="assets/icons/processing-time.png"></span>
+                        <span class="s2">Work Experience</span>
+                    </h4>
+                    <p>My professional background includes experience in various companies, where I've contributed to different roles and responsibilities.</p>
+                </div>
+            </div>
         </div>
         <div class="box" style="grid-area: box-11">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam blanditiis repellendus nobis, nemo alias dolore? Ipsam soluta quia molestias in, quisquam quod facilis repudiandae eligendi voluptates ea necessitatibus. Quisquam, dolorum!
+            <div class="box-11-container">
+                <div class="header-container">
+                    <h4>
+                        <span class="s1"><img src="assets/icons/education.png"></span>
+                        <span class="s2">Educational Background</span>
+                    </h4>
+                    <p>The educational institutions I attended and successfully graduated from.</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
