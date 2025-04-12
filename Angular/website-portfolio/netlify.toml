@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist/website-portfolio/server"
+  publish = "dist/website-portfolio"
 
 [[redirects]]
 from = "/*"
