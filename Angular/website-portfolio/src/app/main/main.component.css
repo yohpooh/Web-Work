@@ -1130,15 +1130,55 @@
     }
 }
 
-.box-8-text-2 {
+@keyframes cursor {
+    50% { border-color: transparent; }
+}
 
+@keyframes typings {
+    0%, 10% { width: 0%; }
+    70%, 100% { width: 101%; }
+}
+
+@keyframes slides {
+    100% { transform: translateY(-600%); }
+}
+
+.box-8-text-2 {
+    /* outline: 1px solid red; */
     h2 {
+        display: flex;
         font-size: 16px;
         font-weight: 500;
+        
+        height: 21px;
+        
+        overflow: hidden;
 
         .typing {
             font-weight: bold;
             color: #8A2BE2;
+            margin-left: 5px;
+
+            ol {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: start;
+            }
+
+            li {
+                list-style-type: none;
+                animation: slides calc(6*2*2s) steps(6) infinite;
+            }
+            
+            span {
+                overflow: hidden;
+                border-right: .2rem solid #8A2BE2;
+                display: inline-block;
+                white-space: nowrap;
+                width: 0%;
+                animation: cursor .8s step-end infinite,
+                typings 2s steps(20) infinite alternate;
+            }
         }
     }
 }
